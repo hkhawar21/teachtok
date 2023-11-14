@@ -7,11 +7,11 @@ declare module "expo-router" {
   export * from 'expo-router/build';
 
   // prettier-ignore
-  type StaticRoutes = `/` | `/(tabs)/Discover` | `/Discover` | `/(tabs)/Home` | `/Home` | `/(tabs)/_layout` | `/_layout` | `/+html` | `/(tabs)/Activity` | `/Activity` | `/(tabs)/Bookmarks` | `/Bookmarks` | `/(tabs)/Profile` | `/Profile`;
+  type StaticRoutes = `/` | `/(tabs)/Discover` | `/Discover` | `/(tabs)/_layout` | `/_layout` | `/+html` | `/(tabs)/Activity` | `/Activity` | `/(tabs)/Bookmarks` | `/Bookmarks` | `/(tabs)/Profile` | `/Profile` | `/(tabs)/Home` | `/Home`;
   // prettier-ignore
-  type DynamicRoutes<T extends string> = `/${CatchAllRoutePart<T>}`;
+  type DynamicRoutes<T extends string> = never;
   // prettier-ignore
-  type DynamicRouteTemplate = `/[...missing]`;
+  type DynamicRouteTemplate = never;
 
   type RelativePathString = `./${string}` | `../${string}` | '..';
   type AbsoluteRoute = DynamicRouteTemplate | StaticRoutes;
